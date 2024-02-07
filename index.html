@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Envie su formulario</h2>
+        <form action="https://formsubmit.co/ratonruben@gmail.com" method="POST" onsubmit="return showAlert()">
+            <label form="Nombre">Nombre</label>
+            <input type="text" name="name">
+    
+            <label form="Apellidos">Apellidos</label>
+            <input type="text" name="surname">
+    
+            <label for="Confirmacion">Confirmacion</label>
+            <input type="checkbox" name="si">Si
+            <input type="checkbox" name="no">No
+        
+            <input type="submit" value="Enviar">
+    
+            <input type="hidden" name="_next" value="http://localhost:4200/">
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+    </div>
+    <script>
+        function showAlert(){
+            alert ('Gracias por Confirmar');
+            return true;
+        }
+        </script>
+</body>
+</html>
